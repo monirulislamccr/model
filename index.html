@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div
+            class="online_3d_viewer"
+            style="width: 800px; height: 600px"
+            model="buckle.stl"
+        ></div>
+        <script type="text/javascript" src="o3dv/o3dv.min.js"></script>
+        <script>
+            window.addEventListener("load", () => {
+                // tell the engine where to find the libs folder
+                OV.SetExternalLibLocation("libs");
+                // init all viewers on the page
+                OV.Init3DViewerElements();
+            });
+        </script>
+    </body>
+</html>
